@@ -14,16 +14,30 @@ app.get("/", (req, res) => {
 });
 
 app.post("/", (req, res) => {
-    const name = req.body.name,
-    age = req.body.age,
-    gender = req.body.gender,
-    latid = req.body.latitude,
-    longt = req.body.longitude,
-    symptoms = "blablabla then blablabla",
-    therapy = "blabliblu",
-    hospital = ["Siloam hospital", "rsud"];
+    const name = "johnny",
+    age = "69",
+    gender = "Male",
+    latid = 1231234,
+    longt = 12341234,
+    symptoms = ["blabla", "bliblu"],
+    therapy = {
+        title: "blabliblu", 
+        url: "sadfasdf"
+    },
+    hospital = [
+        {
+            title: "Siloam hospital",
+            url: "www.google.com"
+        },
+        {
+            title: "rsud",
+            url: "youtube.com"
+        }
+    ],
+    resultML = "hasil";
 
     res.send({
+        "resultML": resultML,
         "name": name,
         "age": age,
         "gender": gender,
